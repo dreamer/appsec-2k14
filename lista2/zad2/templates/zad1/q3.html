@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+
+{#<<script>script> alert("Haha, I hacked your page."); </</script>script>#}
+
+        <form action="" method="POST">
+        {% csrf_token %}
+        <textarea name="text">
+
+        </textarea>
+        <input type="submit">
+        </form>
+
+        {{ text|removetags:"script"|safe }}
+
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+
+
+        <form action="" method="POST">
+        {% csrf_token %}
+        <textarea name="text">
+
+        </textarea>
+        <input type="submit">
+        </form>
+
+        {{ text|safe }}
+
+    </body>
+</html>
