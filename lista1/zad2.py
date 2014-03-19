@@ -4,7 +4,7 @@ from django.conf import settings
 
 settings.configure()
 
-from django.contrib.auth.hashers import MD5PasswordHasher, SHA1PasswordHasher, CryptPasswordHasher, PBKDF2PasswordHasher, PBKDF2SHA1PasswordHasher
+from django.contrib.auth.hashers import MD5PasswordHasher, SHA1PasswordHasher, CryptPasswordHasher, PBKDF2PasswordHasher, PBKDF2SHA1PasswordHasher, UnsaltedSHA1PasswordHasher
 
 words = open('words').read()
 
@@ -18,6 +18,12 @@ def enc_md5():
     print "MD5"
     obj = MD5PasswordHasher()
     print base64.b64encode(obj.encode(message, salt))
+
+def enc_umd5():
+    print ""
+    print "Unsigned MD5"
+    obj = UnsaltedSHA1PasswordHasher()
+    print base64.b64encode(obj.encode(message, ''))
 
 
 def enc_SHA1():
@@ -47,6 +53,7 @@ def enc_pbkdf2sha1():
 if __name__ == '__main__':
     alg = sys.argv[1]
     if alg == 'enc_md5': enc_md5()
+    if alg == 'enc_umd5': enc_umd5()
     if alg == 'enc_uSHA1': enc_SHA1()
     if alg == 'enc_crypt': enc_crypt()
     if alg == 'enc_pbkdf2': enc_pbkdf2()

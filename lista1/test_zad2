@@ -1,5 +1,6 @@
 #!/bin/bash
 time python zad2.py enc_md5
+time python zad2.py enc_umd5
 time python zad2.py enc_uSHA1
 time python zad2.py enc_crypt
 time python zad2.py enc_pbkdf2
