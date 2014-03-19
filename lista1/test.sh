@@ -3,4 +3,6 @@ time make ciphertext.aes
 time make decrypted.aes
 time make ciphertext.des3
 time make decrypted.des3
+time make ciphertext.blowfish
+time make decrypted.blowfish
 make clean

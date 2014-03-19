@@ -1,5 +1,5 @@
 import sys
-from Crypto.Cipher import AES, DES3
+from Crypto.Cipher import AES, DES3, Blowfish
 import base64
 
 
@@ -24,12 +24,21 @@ def dec_aes():
 	print obj.decrypt(base64.b64decode(ciphertext))
 
 def enc_des3():
-	obj = DES3.new(key, DES3.MODE_OFB, iv8)
+	obj = DES3.new(key, DES3.MODE_CBC, iv8)
 	print base64.b64encode(obj.encrypt(message))
 
 def dec_des3():
 	ciphertext = open('ciphertext.aes', 'rb').read()
-	obj = DES3.new(key, DES3.MODE_OFB, iv8)
+	obj = DES3.new(key, DES3.MODE_CBC, iv8)
+	print obj.decrypt(base64.b64decode(ciphertext))
+
+def enc_blowfish():
+	obj = Blowfish.new(key, Blowfish.MODE_CBC, iv8)
+	print base64.b64encode(obj.encrypt(message))
+
+def dec_blowfish():
+	ciphertext = open('ciphertext.blowfish', 'rb').read()
+	obj = Blowfish.new(key, Blowfish.MODE_CBC, iv8)
 	print obj.decrypt(base64.b64decode(ciphertext))
 
 
@@ -39,3 +48,6 @@ if __name__ == '__main__':
 	if alg == 'dec_aes':  dec_aes()
 	if alg == 'enc_des3': enc_des3()
 	if alg == 'dec_des3': dec_des3()
+	if alg == 'enc_blowfish': enc_blowfish()
+	if alg == 'dec_blowfish': dec_blowfish()
+
