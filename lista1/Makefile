@@ -4,8 +4,13 @@ ciphertext.aes:
 decrypted.aes:
 	python zad1.py dec_aes > $@
 
+ciphertext.des3:
+	python zad1.py enc_des3 > $@
+
+decrypted.des3:
+	python zad1.py dec_des3 > $@
+
 clean:
-	rm decrypted.aes
-	rm ciphertext.aes
+	rm *.{aes,des3}
 
 .PHONY: clean
