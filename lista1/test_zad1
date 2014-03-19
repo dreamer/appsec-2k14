@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 time make ciphertext.aes
 time make decrypted.aes
 time make ciphertext.des3

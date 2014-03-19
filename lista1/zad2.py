@@ -14,24 +14,33 @@ salt = 'konstantynopolitanczykowianeczka'
 
 
 def enc_md5():
+    print ""
+    print "MD5"
     obj = MD5PasswordHasher()
     print base64.b64encode(obj.encode(message, salt))
 
 
 def enc_SHA1():
+    print ""
+    print "SHA1"
     obj = SHA1PasswordHasher()
     print base64.b64encode(obj.encode(message, salt))
 
 def enc_crypt():
+    print ""
+    print "crypt"
     obj = CryptPasswordHasher()
     print base64.b64encode(obj.encode(message, 'aa'))
 
-
 def enc_pbkdf2():
+    print ""
+    print "PBKDF2"
     obj = PBKDF2PasswordHasher()
     print base64.b64encode(obj.encode(message, salt))
 
 def enc_pbkdf2sha1():
+    print ""
+    print "PBKDF2 SHA1"
     obj = PBKDF2SHA1PasswordHasher()
     print base64.b64encode(obj.encode(message, salt))
 
