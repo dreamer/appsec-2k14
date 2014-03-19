@@ -13,4 +13,4 @@ decrypted.des3:
 clean:
 	rm *.{aes,des3}
 
-.PHONY: clean
+.PHONY: clean *.aes *.des3
