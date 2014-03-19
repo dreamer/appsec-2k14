@@ -1,4 +1,6 @@
-To run test and show times for zad1:
+To run tests and show times for exercises:
 
 $ ./test_zad1
+
+$ ./test_zad2
 

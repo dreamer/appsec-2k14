@@ -1,0 +1,6 @@
+#!/bin/sh
+time python zad2.py enc_md5
+time python zad2.py enc_uSHA1
+time python zad2.py enc_crypt
+time python zad2.py enc_pbkdf2
+time python zad2.py enc_pbkdf2sha1
