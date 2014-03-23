@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title></title> 
+  <id>IF YOU CAN SEE THIS TEXT, ATOM FEEDS ARE NOT SUPPORTED</id>
+
+  <entry>
+    <title>IF YOU CAN SEE THIS TEXT, BUT NO PRECEEDING TEXT, ATOM FEEDS ARE PROBABLY SUPPORTED</title>
+    <content type="html">
+      &lt;font color=red&gt;IF THIS TEXT IS SHOWN IN RED, INDIRECT HTML IS SUPPORTED&lt;/font&gt;
+    </content>
+  </entry>
+
+  <entry>
+    <title>IF NO TEXT IS SHOWN BELOW, NESTED DIRECT HTML IS NOT ALLOWED</title>
+    <content xmlns="http://www.w3.org/1999/xhtml">
+      <font color="red">IF THIS TEXT IS SHOWN IN RED, DIRECT HTML NAMESPACE IS SUPPORTED</font>
+    </content>
+  </entry>
+
+</feed>

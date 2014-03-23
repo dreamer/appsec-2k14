@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test>
+  <span style="display: none">IF THIS TEXT IS SHOWN AT ALL, GENERIC XML DOCUMENT SUPPORT IS AVAILABLE.</span>
+  <p xmlns="http://www.w3.org/1999/xhtml" />
+  <span style="color: red">IF THIS TEXT IS SHOWN IN RED, GENERIC XML DOCUMENT SUPPORT IS NOT AVAILABLE.</span>
+</test>

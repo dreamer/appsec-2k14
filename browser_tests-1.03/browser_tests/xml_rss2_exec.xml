@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title></title>
+    <link>http://example.com/</link>
+    <description></description>
+
+    <item>
+      <guid>IF YOU CAN SEE THIS TEXT, RSS v2 FEEDS ARE NOT SUPPORTED, AND THE REMAINING TEXT SHOULD BE IGNORED.</guid>
+    </item>
+
+    <item>
+      <title>IF YOU CAN SEE THIS BUT NO PRECEEDING TEXT, RSSv2 FEEDS ARE PROBABLY SUPPORTED</title>
+      <description type="html">
+        &lt;font color=red&gt;IF THIS TEXT IS SHOWN IN RED, INDIRECT HTML IS SUPPORTED, AND THE FOLLOWING TESTS ACTUALLY MAKE SENSE. 
+            Otherwise, simply disregard any trailing garbage.&lt;/font&gt;&lt;p&gt;
+
+        &lt;ul&gt; TEST 1: If there is a 'TEST 1' pop-up prompt, simple SCRIPT tags are permitted.  &lt;script&gt;alert('TEST 1');&lt;/script&gt;&lt;p /&gt;&lt;/ul&gt;
+        &lt;ul&gt; TEST 2: If &lt;a href="javascript:alert('TEST 2')"&gt;THESE WORDS&lt;/a&gt; are clickable and result in an alert, javascript: links are permitted.&lt;p /&gt;&lt;/ul&gt;
+        &lt;ul&gt; TEST 3: If &lt;a href="data:text/html,&lt;script&gt;alert('TEST 3')&lt;/script&gt;"&gt;THESE WORDS&lt;/a&gt; are clickable and result in an alert, data: links are permitted.&lt;p /&gt;&lt;/ul&gt;
+        &lt;ul&gt; TEST 4: If &lt;a href="http://www.example.com/" onmouseover="alert('TEST 4')"&gt;this link&lt;/a&gt; results in an alert upon hover, event handlers are permitted.&lt;p /&gt;&lt;/ul&gt;
+        &lt;ul&gt; TEST 5: If &lt;span style="color:red"&gt;THESE WORDS&lt;/span&gt; are shown in red, stylesheets are accepted.&lt;p /&gt;&lt;/ul&gt;
+
+        &lt;/p&gt;
+
+        ...if none of these criteria are met, then feed HTML is probably well-sandboxed.
+
+      </description>
+    </item>
+
+  </channel>
+</rss>
+
